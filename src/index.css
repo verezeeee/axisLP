@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+.editorial-shadow {
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+.kerning-wide {
+  letter-spacing: 0.15em;
+}
+
+.kerning-extra-wide {
+  letter-spacing: 0.25em;
+}
+
