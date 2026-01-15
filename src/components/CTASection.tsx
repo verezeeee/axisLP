@@ -5,7 +5,7 @@ export const CTASection: React.FC = () => {
   return (
     <section className="py-32 bg-white">
       <div className="max-w-[1280px] mx-auto px-6 md:px-12">
-        <div className="bg-primary p-12 md:p-24 rounded-[3rem] relative overflow-hidden group text-center flex flex-col items-center gap-10">
+        <div className="bg-[#1e8194] p-12 md:p-24 rounded-[3rem] relative overflow-hidden group text-center flex flex-col items-center gap-10">
           <div className="relative z-10 max-w-2xl mx-auto flex flex-col gap-8">
             <h2 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
               Pronto para redesenhar sua realidade?
