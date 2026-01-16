@@ -9,7 +9,8 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ activeSection }) => {
   const navItems = [
     { label: 'Serviços', id: 'servicos' },
-    { label: 'Casos', id: 'casos' },
+    { label: 'Sobre', id: 'filosofia' },
+    { label: 'Casos de Estudo', id: 'casos' },
     { label: 'Processo', id: 'processo' },
   ];
 
@@ -26,8 +27,8 @@ export const Header: React.FC<HeaderProps> = ({ activeSection }) => {
             <a 
               key={item.id}
               href={`#${item.id}`}
-              className={`text-[10px] uppercase font-bold tracking-[0.15em] transition-colors hover:text-primary ${
-                activeSection === item.id ? 'text-primary' : 'text-neutral-charcoal/60'
+              className={`text-[10px] uppercase font-bold tracking-[0.15em] transition-colors hover:text-[#1e8094] ${
+                activeSection === item.id ? 'text-[#1e8094]' : 'text-neutral-charcoal/60'
               }`}
             >
               {item.label}
@@ -35,14 +36,14 @@ export const Header: React.FC<HeaderProps> = ({ activeSection }) => {
           ))}
         </nav>
 
-        {/* <div className="md:w-[160px] flex justify-end">
+        <div className="hidden md:flex items-center justify-end gap-5 w-[220px]">
           <a 
-            href="#processo"
-            className="hidden md:flex items-center justify-center rounded-full bg-neutral-charcoal text-white text-[10px] uppercase font-bold tracking-[0.15em] h-10 px-6 transition-all hover:opacity-90 active:scale-95 shadow-lg"
+            href="#contato"
+            className="flex items-center justify-center rounded-full bg-[#1e8094] text-white text-[10px] uppercase font-bold tracking-[0.15em] h-10 px-6 transition-all hover:opacity-90 active:scale-95 shadow-lg shadow-[#1e8094]/30"
           >
-            Começar
+            Fale Conosco
           </a>
-        </div> */}
+        </div>
       </div>
     </header>
   );

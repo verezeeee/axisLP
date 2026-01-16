@@ -5,21 +5,21 @@ export const CTASection: React.FC = () => {
   return (
     <section className="py-32 bg-white">
       <div className="max-w-[1280px] mx-auto px-6 md:px-12">
-        <div className="bg-[#1e8194] p-12 md:p-24 rounded-[3rem] relative overflow-hidden group text-center flex flex-col items-center gap-10">
+        <div className="bg-[#1e8094] p-12 md:p-24 rounded-[3rem] relative overflow-hidden group text-center flex flex-col items-center gap-10">
           <div className="relative z-10 max-w-2xl mx-auto flex flex-col gap-8">
             <h2 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
-              Pronto para redesenhar sua realidade?
+              Pronto para evoluir sua empresa?
             </h2>
             <p className="text-lg md:text-xl text-white/80 leading-relaxed font-medium">
-              Agende uma sessão estratégica gratuita para avaliarmos o potencial de automação da sua empresa. Vamos construir o futuro juntos.
+              O LLM-as-a-Service dos serviços modernos que irá levar a sua vantagem competitiva para o próximo nível.
             </p>
           </div>
           
           <a 
-            href="mailto:contato@axis.ia?subject=Consultoria%20Estratégica"
-            className="relative z-10 inline-flex items-center h-16 px-12 bg-white text-primary text-sm uppercase font-bold tracking-[0.2em] rounded-full hover:scale-105 transition-all shadow-2xl hover:bg-neutral-grey"
+            href="#contato"
+            className="relative z-10 inline-flex items-center h-16 px-12 bg-white text-[#1e8094] text-sm uppercase font-bold tracking-[0.2em] rounded-full hover:scale-105 transition-all shadow-2xl hover:bg-neutral-grey"
           >
-            Agendar Consultoria Estratégica
+            Contate Nossos Estrategistas
           </a>
           
           {/* Decorative Elements */}
