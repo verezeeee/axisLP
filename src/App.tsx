@@ -4,7 +4,6 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { CapabilitiesSection } from './components/CapabilitiesSection';
 import { PhilosophySection } from './components/PhilosophySection';
-import { CasesSection } from './components/CasesSection';
 import { ProcessSection } from './components/ProcessSection';
 import { CTASection } from './components/CTASection';
 import { Footer } from './components/Footer';
@@ -39,16 +38,16 @@ const [activeSection, setActiveSection] = useState('home');
         <div id="home">
           <Hero />
         </div>
-        <div id="servicos" className="pt-20">
+        <div id="servicos">
           <CapabilitiesSection />
         </div>
         <div id="filosofia">
           <PhilosophySection />
         </div>
-        <div id="casos" className="pt-20">
+        {/* <div id="casos" className="pt-20">
           <CasesSection />
-        </div>
-        <div id="processo" className="pt-20">
+        </div> */}
+        <div id="processo">
           <ProcessSection />
         </div>
         <CTASection />

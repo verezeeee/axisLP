@@ -18,7 +18,7 @@ export const ProcessSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-32 bg-white">
+    <section className="py-16 bg-white">
       <div className="max-w-[1280px] mx-auto px-6 md:px-12">
         <div className="text-center max-w-2xl mx-auto mb-24">
           <h2 className="text-[10px] font-bold text-[#1e8094] uppercase tracking-[0.4em] mb-6">Como Entregamos Valor</h2>

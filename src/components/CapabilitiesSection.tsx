@@ -14,11 +14,6 @@ export const CapabilitiesSection: React.FC = () => {
       icon: 'schema',
     },
     {
-      title: 'Integração de LLM',
-      desc: 'Modelos de linguagem de grande escala ajustados especificamente aos dados da sua organização.',
-      icon: 'model_training',
-    },
-    {
       title: 'Ops Automatizados',
       desc: 'Escalando operações complexas com agentes autônomos e manutenção preditiva.',
       icon: 'smart_toy',
@@ -26,7 +21,7 @@ export const CapabilitiesSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-32 bg-background-light">
+    <section className=" bg-background-light">
       <div className="max-w-[1280px] mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
           <div className="max-w-2xl">
@@ -38,7 +33,7 @@ export const CapabilitiesSection: React.FC = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6">
           {capabilities.map((item) => (
             <div key={item.title} className="group p-10 bg-white rounded-3xl transition-all duration-300">
               <span className="material-symbols-outlined text-3xl text-[#1e8094] mb-6 block">{item.icon}</span>

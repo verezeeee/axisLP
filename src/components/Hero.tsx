@@ -1,44 +1,77 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 export const Hero: React.FC = () => {
-  return (
-    <section className="relative overflow-hidden pt-40 pb-20 md:pt-56 md:pb-40 bg-white">
-      {/* Background Decorative Circles */}
-      <div className="absolute -right-20 top-20 opacity-[0.05] pointer-events-none select-none">
-        <svg fill="none" height="800" viewBox="0 0 100 100" width="800" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="0.5" className="animate-pulse-move"></circle>
-          <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="0.5" className="animate-pulse-move animation-delay-200"></circle>
-          <circle cx="50" cy="50" r="20" stroke="currentColor" strokeWidth="0.5" className="animate-pulse-move animation-delay-400"></circle>
-        </svg>
-      </div>
+  const [dotPosition, setDotPosition] = useState({ cx: 100, cy: 100 });
 
-      <div className="max-w-[1280px] mx-auto px-6 md:px-12 relative z-10 flex flex-col items-start text-left">
-        <p className="text-[10px] uppercase font-bold tracking-[0.4em] text-neutral-charcoal/40 mb-8">
-          A Solução Ideal em Processos de Negócio
-        </p>
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const newCx = 100 + (Math.random() - 0.5) * 50;
+      const newCy = 100 + (Math.random() - 0.5) * 50;
+      setDotPosition({ cx: newCx, cy: newCy });
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+  return (
+    <section className="relative bg-white pt-40  md:pt-56 ">
+      <div className="max-w-3xl mx-auto px-6 md:px-12 flex flex-col items-center text-center">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neutral-grey/60 border border-neutral-grey text-[10px] font-bold uppercase tracking-[0.2em] mb-8">
+          Manifesto da Agência
+        </div>
         
-        <h1 className="text-6xl md:text-8xl font-light tracking-[-0.03em] mb-10 text-neutral-charcoal max-w-4xl">
-          Automação Inteligente para a <span className="font-extrabold text-[#1e8094]">Empresa Moderna.</span>
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-10 text-transparent bg-clip-text bg-linear-to-r from-black to-[#1e8094]">
+          Onde a Estrutura Encontra a Inteligência.
         </h1>
         
-        <p className="max-w-2xl text-xl md:text-2xl text-neutral-charcoal/60 font-light leading-relaxed">
-          Alavancamos modelos de linguagem de ponta para otimizar operações, impulsionar a eficiência e construir um ecossistema de automação personalizado para a automação estratégica. Construímos a espinha dorsal da sua operação.
+        <p className="text-lg md:text-xl text-neutral-charcoal/60 leading-relaxed">
+          Não somos apenas uma agência de IA. Somos arquitetos de sistemas autônomos que permitem que as mentes mais brilhantes foquem no que é verdadeiramente humano.
         </p>
+      </div>
 
-        <div className="flex flex-col sm:flex-row gap-5 mt-16">
-          <a 
-            href="#processo"
-            className="flex min-w-[220px] h-14 items-center justify-center rounded-full bg-[#1e8094] text-white text-sm font-bold tracking-widest hover:shadow-2xl hover:shadow-[#1e8094]/30 hover:-translate-y-0.5 transition-all uppercase px-4"
-          >
-            Iniciar Transformação
-          </a>
-          <a 
-            href="#servicos"
-            className="flex min-w-[220px] h-14 items-center justify-center rounded-full border border-neutral-grey bg-transparent text-neutral-charcoal text-sm font-bold tracking-widest hover:bg-neutral-grey/20 transition-all uppercase"
-          >
-            Ver Metodologia
-          </a>
+      {/* Vision Section */}
+      <div className="max-w-[1280px] mx-auto px-6 md:px-12 mt-32 md:mt-40">
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-20">
+          {/* Left Column: SVG */}
+          <div className="w-full lg:w-1/2 relative flex items-center justify-center">
+            <div className="absolute w-full max-w-lg aspect-square rounded-full bg-[#1e8094]/5 blur-3xl"></div>
+            <svg viewBox="0 0 200 200" className="w-full max-w-lg">
+              <circle cx="100" cy="100" r="90" stroke="#e0e0e0" strokeWidth="0.5" fill="none" />
+              <circle cx="100" cy="100" r="70" stroke="#e0e0e0" strokeWidth="0.5" fill="none" />
+              <circle cx="100" cy="100" r="50" stroke="#e0e0e0" strokeWidth="0.5" fill="none" />
+              <circle 
+                cx={dotPosition.cx}
+                cy={dotPosition.cy}
+                r="5" 
+                fill="#1e8094" 
+                style={{ transition: 'cx 2s ease-in-out, cy 2s ease-in-out' }}
+              />
+            </svg>
+          </div>
+
+          {/* Right Column: Text Content */}
+          <div className="w-full lg:w-1/2">
+            <h2 className="text-[10px] font-bold text-[#1e8094] uppercase tracking-[0.4em] mb-6">Nossa Visão</h2>
+            <h3 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-charcoal mb-8">Um futuro onde a complexidade é invisível.</h3>
+            <p className="text-lg text-neutral-charcoal/60 leading-relaxed mb-12">
+              Visualizamos um mercado corporativo onde o atrito operacional é coisa do passado. Na AXIS, construímos as pontes entre os fluxos de trabalho tradicionais e as capacidades exponenciais da Inteligência Artificial.
+            </p>
+            
+            <div className="flex flex-col gap-8">
+              <div className="flex gap-6 border-l-2 border-[#1e8094] pl-6">
+                <div>
+                  <h4 className="font-bold text-sm uppercase tracking-widest text-neutral-charcoal">Impacto Sistêmico</h4>
+                  <p className="text-neutral-charcoal/60 text-sm mt-2">Transformamos processos isolados em ecossistemas inteligentes.</p>
+                </div>
+              </div>
+              <div className="flex gap-6 border-l-2 border-[#1e8094] pl-6">
+                <div>
+                  <h4 className="font-bold text-sm uppercase tracking-widest text-neutral-charcoal">Ética por Design</h4>
+                  <p className="text-neutral-charcoal/60 text-sm mt-2">IA responsável integrada na base de cada automação.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

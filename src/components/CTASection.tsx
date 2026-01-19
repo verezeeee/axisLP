@@ -3,15 +3,16 @@ import React from 'react';
 
 export const CTASection: React.FC = () => {
   return (
-    <section className="py-32 bg-white">
+    <section className="py-16 bg-white">
       <div className="max-w-[1280px] mx-auto px-6 md:px-12">
         <div className="bg-[#1e8094] p-12 md:p-24 rounded-[3rem] relative overflow-hidden group text-center flex flex-col items-center gap-10">
           <div className="relative z-10 max-w-2xl mx-auto flex flex-col gap-8">
             <h2 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
-              Pronto para evoluir sua empresa?
+              Você chegou ao fim da página.
             </h2>
             <p className="text-lg md:text-xl text-white/80 leading-relaxed font-medium">
-              O LLM-as-a-Service dos serviços modernos que irá levar a sua vantagem competitiva para o próximo nível.
+              Se chegou até aqui, é porque tá interessado. <br/>
+              Então clica aqui em baixo e fala com a gente!
             </p>
           </div>
           
@@ -19,7 +20,7 @@ export const CTASection: React.FC = () => {
             href="#contato"
             className="relative z-10 inline-flex items-center h-16 px-12 bg-white text-[#1e8094] text-sm uppercase font-bold tracking-[0.2em] rounded-full hover:scale-105 transition-all shadow-2xl hover:bg-neutral-grey"
           >
-            Contate Nossos Estrategistas
+            Entre em contato
           </a>
           
           {/* Decorative Elements */}

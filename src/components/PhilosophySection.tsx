@@ -3,19 +3,19 @@ import React from 'react';
 
 export const PhilosophySection: React.FC = () => {
   return (
-    <section className="py-24 md:py-40 bg-white overflow-hidden">
+    <section className="py-16 md:py-20 bg-white overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-6 md:px-12">
-        <div className="flex flex-col lg:flex-row gap-20 lg:items-center">
+        <div className="flex flex-col-reverse lg:flex-row gap-20 lg:items-center">
           <div className="w-full lg:w-1/2 relative">
-            <div className="aspect-[4/5] bg-neutral-grey/30 rounded-3xl overflow-hidden shadow-2xl relative z-10 border border-neutral-grey">
+            <div className="aspect-auto bg-neutral-grey/30 rounded-3xl overflow-hidden relative z-10">
               <img 
                 alt="Modern Architecture" 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" 
-                src="https://picsum.photos/800/1000?random=1" 
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl" 
+                src="/plato.png" 
               />
             </div>
             {/* Accent */}
-            <div className="absolute -top-16 -right-16 w-96 h-96 bg-neutral-grey/20 rounded-full -z-0"></div>
+            <div className="absolute -top-16 -right-16 w-96 h-96 bg-neutral-grey/20 rounded-full z-0"></div>
           </div>
           
           <div className="w-full lg:w-1/2 flex flex-col gap-10">
@@ -45,15 +45,6 @@ export const PhilosophySection: React.FC = () => {
                   <p className="text-sm text-neutral-charcoal/60 mt-1">Tecnologia servindo às pessoas primeiro.</p>
                 </div>
               </div>
-            </div>
-            
-            <div className="pt-4">
-              <a 
-                href="#servicos"
-                className="inline-flex min-w-[200px] h-14 items-center justify-center rounded-full bg-[#1e8094] text-white text-sm font-bold tracking-[0.1em] hover:shadow-xl hover:shadow-[#1e8094]/20 transition-all uppercase"
-              >
-                Saiba Mais
-              </a>
             </div>
           </div>
         </div>
