@@ -17,7 +17,9 @@ export const CTASection: React.FC = () => {
           </div>
           
           <a 
-            href="#contato"
+            href="https://wa.me/5562936180480?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os"
+            target="_blank"
+            rel="noopener noreferrer"
             className="relative z-10 inline-flex items-center h-16 px-12 bg-white text-[#1e8094] text-sm uppercase font-bold tracking-[0.2em] rounded-full hover:scale-105 transition-all shadow-2xl hover:bg-neutral-grey"
           >
             Entre em contato
